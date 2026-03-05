@@ -2,17 +2,63 @@
 <head>
 	<title>melek - Portfolyo</title>
 	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#f8f9fa">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+	<style>
+		/* Mobil uyumluluk için ek stiller */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.container {
+			max-width: 1000px;
+			margin: 20px auto;
+			background: rgba(255, 255, 255, 0.8);
+			border-radius: 16px;
+			box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+			padding: 20px;
+			width: 92%;
+			box-sizing: border-box;
+		}
+		@media (min-width: 768px) {
+			.container {
+				margin: 40px auto;
+				padding: 32px;
+				width: 95vw;
+			}
+		}
+		.logo-text {
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #1e3a8a;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+		}
+		@media (min-width: 768px) {
+			.logo-text {
+				font-size: 2.2rem;
+			}
+		}
+		section {
+			margin-bottom: 30px;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+	</style>
 </head>
 <body>
 	<!-- Navbar başlangıcı -->
 	<nav class="navbar">
 		<div class="navbar-logo">
-			<a href="https://github.com/" style="text-decoration: none; color: inherit;"><span style="font-size: 2.2rem; font-weight: 700; color: #1e3a8a; letter-spacing: 1px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">Melek Naz Arslan</span></a>
+			<a href="https://github.com/" style="text-decoration: none; color: inherit;"><span class="logo-text">Melek Naz Arslan</span></a>
 		</div>
 		<ul class="navbar-menu" id="navbar-menu">
 			<li><a href="#home">Ana Sayfa</a></li>
@@ -28,19 +74,17 @@
 		</button>
 	</nav>
 	<!-- Navbar bitişi -->
-	<main style="max-width: 1000px; margin: 40px auto; background: #fff8; border-radius: 16px; box-shadow: 0 4px 24px #0001; padding: 32px; width: 95vw; min-width: 0;">
-		<section id="home">
-			<h1>Ana Sayfa</h1>
-			<p>Hoş geldiniz! Bu sayfada benim hakkımda, çalışmalarım ve iletişim bilgilerim hakkında bilgi bulabilirsiniz.</p>
+	<main class="container">
+		<section id="home" class="hero-section">
+			<h1>Merhaba, ben Melek Naz Arslan!</h1>
+			<p class="hero-description">Modern web teknolojileriyle kullanıcı dostu ve etkili çözümler üreten bir geliştirici. HTML, CSS, JavaScript ve veritabanı yönetimi konularında uzmanlaşıyorum.</p>
 		</section>
-		<br>
-		<br>
 		
 		<section id="about">
 			<h2>Hakkımda</h2>
 			<p>Frontend geliştirme ve veritabanı yönetimi konularında ilgileniyorum. Modern web teknolojileriyle kullanıcı dostu ve etkili çözümler üretmeyi hedefliyorum.</p>
 		</section>
-		<br>
+
 		<section id="skills">
 			<h2>Beceriler</h2>
 			<ul>
@@ -49,12 +93,12 @@
 				<li>Git, GitHub</li>
 			</ul>
 		</section>
-		<br>
+
 		<section id="cv">
 			<h2>Özgeçmiş (CV)</h2>
 			<p>Özgeçmişimi görüntülemek için <a href="melek%20naz%20cv.pdf" target="_blank">buraya tıklayın</a>.</p>
 		</section>
-		<br>
+
 		<section id="certificates">
 			<h2>Sertifikalar ve Başarılar</h2>
 			<ul>
@@ -65,8 +109,7 @@
 				<li>CCNA: Introduction to Networks Sertifikası - Cisco</li>
 			</ul>
 		</section>
-		<br>
-		<br>
+
 		<section id="contact">
 			<h2 onclick="toggleContact()" style="cursor: pointer;">İletişim</h2>
 			<div id="contact-content" style="display: block;">
@@ -80,8 +123,6 @@
 				</ul>
 			</div>
 		</section>
-		<br>
-		<br>
 		
 		<section id="projects">
 			<h2>Ekip Çalışmalarımız</h2>

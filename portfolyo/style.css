@@ -121,6 +121,11 @@
 }
 
 /* Genel Sayfa Stili */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
@@ -139,10 +144,93 @@ main {
     padding: 32px;
 }
 
-h2, h1, h3 {
+h1 {
+    font-size: 2.8em;
+    margin-top: 0;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #0984e3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: #1e3a8a;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #0984e3;
+    display: inline-block;
+}
+
+h3 {
     margin-top: 32px;
     margin-bottom: 12px;
+    color: #1e3a8a;
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Hero Section Stilleri */
+.hero-section {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(9, 132, 227, 0.05) 100%);
+    border-radius: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    color: #0984e3;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-description {
+    font-size: 1.15em;
+    color: #555;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 20px auto;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 ul {

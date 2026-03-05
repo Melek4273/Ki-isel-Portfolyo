@@ -5,6 +5,14 @@ if (navbarToggle && navbarMenu) {
     navbarToggle.addEventListener('click', () => {
         navbarMenu.classList.toggle('active');
     });
+    
+    // Navbar linkine tıklandığında menüyü kapat
+    const navLinks = navbarMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarMenu.classList.remove('active');
+        });
+    });
 }
 
 // Tema değiştirme
